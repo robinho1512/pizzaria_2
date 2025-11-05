@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria | Pizzaria Delícia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff5252, #ffca28);
+      color: #fff;
+    }
+    header {
+      background-color: #d50000;
+      padding: 30px;
+      text-align: center;
+      font-family: 'Bangers', cursive;
+      font-size: 2.5em;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    main {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .foto {
+      background-color: rgba(255,255,255,0.2);
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+      text-align: center;
+    }
+    .foto:hover {
+      transform: scale(1.05);
+      background-color: rgba(255,255,255,0.3);
+    }
+    .foto img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .descricao {
+      font-size: 1em;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>Galeria de Sabores 📸</header>
+  <main>
+    <h2>Momentos que dão água na boca</h2>
+    <!-- Adicione o botão após a <div class="galeria"> -->
+<div style="margin-top: 40px;">
+  <a href="index.html">
+    <button style="background-color:#ff6f00;color:white;padding:12px 25px;border:none;border-radius:10px;font-size:1em;cursor:pointer;transition:background-color 0.3s;" onmouseover="this.style.backgroundColor='#ffd54f'" onmouseout="this.style.backgroundColor='#ff6f00'">
+      ⬅️ Voltar para o Início
+    </button>
+  </a>
+</div>
+
+    <div class="galeria">
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\Copilot_20251105_105155.png" alt="Pizzaiolo preparando massa artesanal">
+        <div class="descricao">👨‍🍳 Pizzaiolo preparando massa artesanal com paixão.</div>
+      </div>
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\Copilot_20251105_105256.png" alt="Pizza saindo do forno">
+        <div class="descricao">🔥 Pizza saindo do forno com queijo derretido e borda crocante.</div>
+      </div>
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\Copilot_20251105_110228.png" alt="Salão decorado para festa">
+        <div class="descricao">🎉 Salão decorado para festa de aniversário temática.</div>
+      </div>
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\ChatGPT Image 5 de nov. de 2025, 11_08_19.png" alt="Mesa de rodízio">
+        <div class="descricao">🍕 Mesa de rodízio com várias pizzas diferentes sendo servidas.</div>
+      </div>
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\ChatGPT Image 5 de nov. de 2025, 11_13_19.png" alt="Bebidas artesanais">
+        <div class="descricao">🥤 Bebidas artesanais servidas com estilo.</div>
+      </div>
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\ChatGPT Image 5 de nov. de 2025, 11_15_03.png" alt="Ambiente acolhedor">
+        <div class="descricao">💫 Ambiente acolhedor com iluminação suave e música ambiente.</div>
+      </div>
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\ChatGPT Image 5 de nov. de 2025, 11_18_19.png" alt="Clientes felizes">
+        <div class="descricao">😊 Clientes felizes saboreando momentos especiais.</div>
+      </div>
+      <div class="foto">
+        <img src="c:\Users\aluno\Downloads\ChatGPT Image 5 de nov. de 2025, 11_21_07.png" alt="Ingredientes frescos">
+        <div class="descricao">🌿 Ingredientes frescos e selecionados para cada receita.</div>
+      </div>
+      
+    </div>
+  </main>
+</body>
+</html>

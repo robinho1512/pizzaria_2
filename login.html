@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login da Mesa | Pizzaria Delícia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff5252, #ffca28);
+      color: #fff;
+    }
+    header {
+      background-color: #d50000;
+      padding: 30px;
+      text-align: center;
+      font-family: 'Bangers', cursive;
+      font-size: 2.5em;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    main {
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      text-align: center;
+    }
+    input {
+      width: 80%;
+      padding: 15px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #ff6f00;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ffd54f;
+    }
+  </style>
+</head>
+<body>
+  <header>Login da Mesa 🧾</header>
+  <main>
+    <h2>Identifique sua mesa para receber seu pedido</h2>
+    <p>Digite o número da sua mesa ou escaneie o QR Code para que o garçom leve seu pedido diretamente até você.</p>
+    <form>
+      <input type="number" placeholder="🔢 Número da Mesa" required />
+      <input type="text" placeholder="📱 Nome " required />
+      <button type="submit">📩 Confirmar</button>
+
+      <!-- Conteúdo igual ao anterior, com botão ao final -->
+<!-- Adicione dentro do <main> após o <form>: -->
+<div style="margin-top: 40px;">
+  <a href="index.html">
+    <button style="background-color:#ff6f00;color:white;padding:12px 25px;border:none;border-radius:10px;font-size:1em;cursor:pointer;transition:background-color 0.3s;" onmouseover="this.style.backgroundColor='#ffd54f'" onmouseout="this.style.backgroundColor='#ff6f00'">
+      ⬅️ Voltar para o Início
+    </button>
+  </a>
+</div>
+
+    </form>
+  </main>
+</body>
+</html>

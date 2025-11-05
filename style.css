@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+  }
+  header {
+    background-color: #e63946;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    background-color: #f1a208;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  h2 {
+    color: #e63946;
+  }
+  button {
+    background-color: #f1a208;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  input, select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  .galeria .foto {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .galeria .descricao {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+  }
+  

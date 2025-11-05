@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Monte sua Pizza | Pizzaria Delícia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff5252, #ffca28);
+      color: #fff;
+    }
+    header {
+      background-color: #d50000;
+      padding: 30px;
+      text-align: center;
+      font-family: 'Bangers', cursive;
+      font-size: 2.5em;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .sabores, .bebidas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .sabores button, .bebidas button {
+      padding: 10px;
+      background-color: #43a047;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .sabores button:hover, .bebidas button:hover {
+      background-color: #66bb6a;
+      transform: scale(1.05);
+    }
+    .pedido-final {
+      background-color: #fff;
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .pedido-final p {
+      margin: 10px 0;
+    }
+    .finalizar {
+      background-color: #c2185b;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .finalizar:hover {
+      background-color: #e91e63;
+    }
+    .voltar {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .voltar button {
+      background-color: #ff6f00;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .voltar button:hover {
+      background-color: #ffd54f;
+    }
+  </style>
+</head>
+<body>
+  <header>Monte sua Pizza 🍕</header>
+  <main>
+    <p>Escolha seus sabores favoritos e sua bebida. Veja seu pedido se formar em tempo real!</p>
+
+    <h2>🍕 Escolha os Sabores</h2>
+    <div class="sabores">
+      <button onclick="adicionarSabor('Margherita')">Margherita</button>
+      <button onclick="adicionarSabor('Pepperoni')">Pepperoni</button>
+      <button onclick="adicionarSabor('Quatro Queijos')">Quatro Queijos</button>
+      <button onclick="adicionarSabor('Veggie')">Veggie</button>
+      <button onclick="adicionarSabor('Bruschetta')">Bruschetta</button>
+      <button onclick="adicionarSabor('Funghi')">Funghi</button>
+      <button onclick="adicionarSabor('Rúcula')">Rúcula</button>
+      <button onclick="adicionarSabor('Chocolate com Morango')">Chocolate com Morango</button>
+    </div>
+
+    <h2>🥤 Escolha sua Bebida</h2>
+    <div class="bebidas">
+      <button onclick="selecionarBebida('Suco Natural')">Suco Natural</button>
+      <button onclick="selecionarBebida('Refrigerante')">Refrigerante</button>
+      <button onclick="selecionarBebida('Água com Gás')">Água com Gás</button>
+      <button onclick="selecionarBebida('Cerveja Artesanal')">Cerveja Artesanal</button>
+    </div>
+
+    <div class="pedido-final">
+      <h3>🧾 Seu Pedido:</h3>
+      <p><strong>Sabores:</strong> <span id="saboresSelecionados">Nenhum</span></p>
+      <p><strong>Bebida:</strong> <span id="bebidaSelecionada">Nenhuma</span></p>
+      <button class="finalizar" onclick="finalizarPedido()">✅ Finalizar Pedido</button>
+    </div>
+
+    <div class="voltar">
+      <a href="index.html">
+        <button>⬅️ Voltar para o Início</button>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    const sabores = [];
+    let bebida = "";
+
+    function adicionarSabor(sabor) {
+      if (!sabores.includes(sabor)) {
+        sabores.push(sabor);
+        atualizarSabores();
+      }
+    }
+
+    function selecionarBebida(bebidaEscolhida) {
+      bebida = bebidaEscolhida;
+      document.getElementById("bebidaSelecionada").textContent = bebida;
+    }
+
+    function atualizarSabores() {
+      document.getElementById("saboresSelecionados").textContent = sabores.join(", ");
+    }
+
+    function finalizarPedido() {
+      if (sabores.length === 0 || bebida === "") {
+        alert("Por favor, escolha pelo menos um sabor e uma bebida.");
+      } else {
+        alert("Pedido confirmado! 🍕\nSabores: " + sabores.join(", ") + "\nBebida: " + bebida);
+      }
+    }
+  </script>
+</body>
+</html>
